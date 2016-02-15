@@ -1,0 +1,23 @@
+{
+	"groups":[{
+			"keys":"grid,white,black",
+			"name":"preload"
+		}],
+	"resources":[
+		{
+			"name":"grid",
+			"type":"image",
+			"url":"assets/grid.png"
+		},
+		{
+			"name":"white",
+			"type":"image",
+			"url":"assets/w.png"
+		},
+		{
+			"name":"black",
+			"type":"image",
+			"url":"assets/b.png"
+		}
+	]
+}
