@@ -4,13 +4,9 @@
  * Kanon
  */
 var Chessman = (function () {
-    function Chessman(color) {
-        this.color = color;
+    function Chessman() {
     }
     var d = __define,c=Chessman,p=c.prototype;
-    p.getColor = function () {
-        return this.color;
-    };
     //黑子
     Chessman.BLACK = 0;
     //白子

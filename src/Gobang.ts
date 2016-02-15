@@ -37,7 +37,8 @@ class Gobang
         if(r >= this.rows || c >= this.columns) return;
         var grid:Grid = this.gridAry[r][c];
         if(grid.chessman) return;
-        grid.chessman = new Chessman(color);
+        grid.chessman = new Chessman();
+        grid.chessman.color = color;
     }
 
     /**
@@ -124,7 +125,7 @@ class Gobang
         if(dir < 1 || dir > 8) return 0;
         var grid:Grid = this.gridAry[r][c];
         if(!grid.chessman) return 0;
-        var curGridColor:number = grid.chessman.getColor();
+        var curGridColor:number = grid.chessman.color;
         var sameColorCount:number = 0;
         //判断8个方向的边界
         for(var i:number = 1; i <= 4; ++i)
@@ -176,7 +177,7 @@ class Gobang
             grid = this.gridAry[row][column];
             if(!grid ||
                !grid.chessman ||
-               grid.chessman.getColor() != curGridColor)
+               grid.chessman.color != curGridColor)
                break;
             sameColorCount++;
         }

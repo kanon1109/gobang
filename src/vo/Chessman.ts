@@ -10,14 +10,5 @@ class Chessman
     //白子
     public static WHITE:number = 1;
     //棋子的颜色
-    private color:number;
-	public constructor(color:number)
-	{
-        this.color = color;
-	}
-
-    public getColor():number
-    {
-        return this.color;
-    }
+    public color:number;
 }

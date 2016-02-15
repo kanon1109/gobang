@@ -32,7 +32,8 @@ var Gobang = (function () {
         var grid = this.gridAry[r][c];
         if (grid.chessman)
             return;
-        grid.chessman = new Chessman(color);
+        grid.chessman = new Chessman();
+        grid.chessman.color = color;
     };
     /**
      * 根据位置获取格子
@@ -110,7 +111,7 @@ var Gobang = (function () {
         var grid = this.gridAry[r][c];
         if (!grid.chessman)
             return 0;
-        var curGridColor = grid.chessman.getColor();
+        var curGridColor = grid.chessman.color;
         var sameColorCount = 0;
         //判断8个方向的边界
         for (var i = 1; i <= 4; ++i) {
@@ -152,7 +153,7 @@ var Gobang = (function () {
             grid = this.gridAry[row][column];
             if (!grid ||
                 !grid.chessman ||
-                grid.chessman.getColor() != curGridColor)
+                grid.chessman.color != curGridColor)
                 break;
             sameColorCount++;
         }
